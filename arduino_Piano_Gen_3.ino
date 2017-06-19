@@ -12,6 +12,9 @@
  int tonepin = 13;  // PWM0 output = 9, PWM1 output = 10
 
  // these are the "piano keys" - they are just input pins
+ #define D3 3
+ #define D4 4
+ #define D5 5
  #define D6 6
  #define D7 7
  #define D8 8
@@ -21,6 +24,9 @@
 
  void setup() {          
    // setup internal pullups on "piano keys" (pins D2 through D6)
+   pinMode(D3, INPUT);
+   pinMode(D4, INPUT);
+   pinMode(D5, INPUT);
    pinMode(D6, INPUT);
    pinMode(D7, INPUT);
    pinMode(D8, INPUT);
@@ -28,6 +34,9 @@
    pinMode(D10, INPUT);
    pinMode(D11, INPUT);
    
+   digitalWrite(D3, HIGH);
+   digitalWrite(D4, HIGH);
+   digitalWrite(D5, HIGH);
    digitalWrite(D6, HIGH);
    digitalWrite(D7, HIGH);
    digitalWrite(D8, HIGH);
