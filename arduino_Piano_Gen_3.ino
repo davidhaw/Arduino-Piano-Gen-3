@@ -58,8 +58,11 @@
        tone(tonepin, NOTE_F4);
      } else if (digitalRead(D7) == LOW) {
        tone(tonepin, NOTE_G4);
-     //Ad extra tone for D6
-   } else {
+     //Add extra tone for D6
+   } else if (digitalRead(D6) == LOW) {
+       tone(tonepin, NOTE_B8); 
+    
+     }else {
        noTone(tonepin);
      }
      delay(100);    // probably not needed.. you can experiment!
