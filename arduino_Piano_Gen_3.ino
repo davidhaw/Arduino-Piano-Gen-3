@@ -1,3 +1,4 @@
+
  
   // Create a very simple "breadboard" piano using a jumper wire to simulate pressing each "piano" key.
   // This one has 5 notes, but you can expand it using more digital IO pins.
@@ -60,11 +61,16 @@
        tone(tonepin, NOTE_G4);
      //Add extra tone for D6
    } else if (digitalRead(D6) == LOW) {
+       tone(tonepin, NOTE_E6); 
+    
+     }else if (digitalRead(D3) == LOW) {
        tone(tonepin, NOTE_E7); 
     
-     }else {
+     }
+     
+     else {
        noTone(tonepin);
      }
      delay(100);    // probably not needed.. you can experiment!
    }
- }
+}
