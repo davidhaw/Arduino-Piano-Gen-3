@@ -62,9 +62,12 @@
      //Add extra tone for D6
    } else if (digitalRead(D6) == LOW) {
        tone(tonepin, NOTE_E6); 
+
+     }else if (digitalRead(D5) == LOW) {
+       tone(tonepin, NOTE_G6); 
     
      }else if (digitalRead(D3) == LOW) {
-       tone(tonepin, NOTE_E7); 
+       tone(tonepin, NOTE_E7);
     
      }
      
